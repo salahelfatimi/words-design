@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primary: #a87b6d;
+  --color-secondary: #181818;
+  --font-primary:'Chillax-Variable'
+}
+
+@font-face {
+  font-family: 'Chillax-Variable';
+  src: url('/fonts/Chillax-Variable.woff2') format('woff2'),
+       url('/fonts/Chillax-Variable.woff') format('woff'),
+       url('/fonts/Chillax-Variable.ttf') format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@keyframes rounded-change {
+  0% {
+      border-radius: 10rem 20rem 15rem 10rem;
+  }
+  25% {
+      border-radius: 15rem 25rem 10rem 20rem;
+  }
+  50% {
+      border-radius: 20rem 10rem 25rem 15rem;
+  }
+  75% {
+      border-radius: 10rem 15rem 20rem 25rem;
+  }
+  100% {
+      border-radius: 10rem 20rem 15rem 10rem;
+  }
+}
+
+.animate-rounded-change {
+  animation: rounded-change 6s infinite ease-in-out; /* Added ease-in-out for smooth transitions */
+}
