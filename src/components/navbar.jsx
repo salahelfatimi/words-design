@@ -64,7 +64,7 @@ export default function Navbar() {
                     <Image src={logoSrc} width={500} height={500} className="w-16" alt="art by Warda" title="art by Warda" />
                     <ul ref={linksRef} className="flex space-x-4 text-white">
                         {ItemsNavbar.map((item, index) => (
-                            <Link href={item.link} key={index} className="cursor-pointer text-sm font-medium font-primary hover:underline duration-500 underline-offset-2">
+                            <Link href={item.link} key={index} className="cursor-pointer text-lg font-medium font-primary hover:underline duration-500 underline-offset-2">
                                 {item.name}
                             </Link>
                         ))}

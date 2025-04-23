@@ -83,7 +83,7 @@ export default function Product_Details({ id }) {
             <div className=" flex flex-col lg:flex-row min-h-screen ">
                 <div className="flex lg:w-full ">
                     {produit?.images?.length > 0 ? (
-                        <Image src={produit.images[currentImageIndex].src} alt={produit?.name} title={produit?.name} width={1920} height={1080} className="h-full w-fit object-cover lg:border-b-4 lg:border-r-4 shadow-2xl " />
+                        <Image src={produit.images[currentImageIndex].src} alt={produit?.name} title={produit?.name} width={1920} height={1080} className="h-full w-fit object-cover lg:border-b-4 lg:border-r-4  shadow-2xl " />
                     ) : (
                         <div className="h-96 w-full object-cover bg-[#EFEFEF] flex flex-col justify-center items-center">
                             <Image width={1920} height={1080} src={'/immobilier/house.png'} className="w-32 md:w-40 lg:w-52" />
@@ -92,7 +92,7 @@ export default function Product_Details({ id }) {
                     )}
                 </div>
                 <div className="lg:w-full  p-6 bg-primary flex flex-col justify-center items-center lg:items-start gap-4">
-                    <h1 className=" text-3xl lg:text-6xl  mb-4 font-primary font-bold text-white uppercase ">{produit.name}</h1>
+                    <h1 className=" text-2xl lg:text-5xl  mb-4 font-primary font-bold text-white uppercase ">{produit.name}</h1>
                     <div className=" flex flex-row gap-4 items-center justify-center">
                         {produit?.categories.map((catg, index) => (<Link href={`/boutique?type=${catg.id}`} className=" border-2 border-white py-1 px-3  rounded-full text-white font-primary" key={index}>{catg.name}</Link>))}
                     </div>

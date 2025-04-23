@@ -1,6 +1,6 @@
-export default function Pgae(){
+export default function AboutUs(){
     return(
-        <div>
+        <div className="min-h-screen">
 
         </div>
     )
