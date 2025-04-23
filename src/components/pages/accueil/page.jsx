@@ -4,6 +4,8 @@ import Image from "next/image";
 import Categories from "./categories/page";
 import { Store } from "lucide-react";
 import Faq from "./faq";
+import LogoScroll from "@/components/tools/logoScroll";
+import Avis from "@/components/tools/avis";
 
 export default function Pgae(){
     return(
@@ -16,12 +18,9 @@ export default function Pgae(){
                     <Link href={'/boutique'} className=" bg-primary text-white rounded-3xl text-xl font-medium hover:bg-secondary hover:text-white py-3 px-6 font-primary flex flex-row items-center justify-center gap-2 "><Store/> Voir Boutique </Link>
                 </div>
             </div>
-            <div>
-                <Produit/>
-            </div>
-            <div>
-                <Categories/>
-            </div>
+            <LogoScroll/>
+            <Produit/>
+            <Categories/>
             <div className=" flex flex-row items-center gap-10 justify-center mx-auto container py-10">
                 <div className="w-1/2 flex items-center justify-center  ">
                     <video width="100%" height="100%" autoPlay loop playsInline muted className="h-[40rem] shadow-2xl w-fit object-cover animate-rounded-change" >
@@ -45,6 +44,7 @@ export default function Pgae(){
                     </ul>
                 </div>
             </div>
+            <Avis/>
             <Faq/>
         </div>
     )
