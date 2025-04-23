@@ -33,14 +33,14 @@ export default function Faq() {
         }
     ];
     return(
-        <div className="bg-primary py-10">
+        <div className="bg-white py-10">
             <div className="container mx-auto px-4 flex flex-col justify-between gap-4 items-center  max-w-7xl ">
-                <h2  className="  text-3xl lg:text-6xl  mb-4 font-primary text-white uppercase text-center "> Foire Aux Questions (FAQ) </h2>
+                <h2  className="  text-3xl lg:text-6xl  mb-4 font-primary font-bold text-primary uppercase  text-center "> Foire Aux Questions (FAQ) </h2>
                 <div className=" flex flex-col gap-6 w-full ">
                     {faqData.map((faq, index) => (
-                        <div key={index} className="flex flex-col p-4 gap-2 border-b-2 last:border-b-0 border-white">
-                            <h3 onClick={()=>(setOpenFaq(index))} className="text-lg lg:text-xl font-primary font-medium text-white cursor-pointer"> - {faq.question}</h3>
-                            <div className={`overflow-hidden transition-all duration-700 ease-in-out text-white ${openFaq == index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div key={index} className="flex flex-col p-4 gap-2 border-b-2 last:border-b-0 border-primary">
+                            <h3 onClick={()=>(setOpenFaq(index))} className="text-lg lg:text-2xl font-primary font-medium text-primary cursor-pointer"> - {faq.question}</h3>
+                            <div className={`overflow-hidden transition-all duration-700 ease-in-out text-secondary ${openFaq == index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
                             <p className="font-primary text-sm lg:text-base">{faq.answer}</p>
                             </div>                    
                         </div>

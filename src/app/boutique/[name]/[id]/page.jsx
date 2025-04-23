@@ -1,4 +1,6 @@
 import Product_Details from "@/components/pages/productDetails/page";
+import Avis from "@/components/tools/avis";
+import Faq from "@/components/tools/faq";
 import Image from "next/image";
 
 export default async function Page({ params }){
@@ -7,6 +9,7 @@ export default async function Page({ params }){
         <div className=" min-h-screen">
             <div className=" bg-secondary h-20"></div>
             <Product_Details id={id}/>
+            <Faq/>
         </div>
     )
 }

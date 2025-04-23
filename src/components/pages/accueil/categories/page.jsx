@@ -37,7 +37,7 @@ export default function Categories(){
     return(
         <div className=" py-10 bg-primary ">
             <div className=" mx-auto container px-4">
-                <h2 className=" text-4xl font-primary text-center pb-10 uppercase font-medium text-white" >Nos Domaines d'Expertise</h2>
+                <h2 className="text-3xl lg:text-6xl  mb-4 font-primary font-bold text-white text-center uppercase " >Nos Domaines d'Expertise</h2>
 
                 <div className=" columns-1 md:columns-2 lg:columns-4 space-y-4">
                     {

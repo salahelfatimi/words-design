@@ -41,16 +41,16 @@ export default function CategoryProduct({category}){
 
     if (isLoading) return <Loading />;
     return(
-        <div className=" py-10 bg-white ">
-            <h2 className=" lg:text-4xl text-2xl font-primary text-center px-10 pb-10 uppercase font-medium text-primary">Annnonces Similaires</h2>
+        <div className=" py-10 bg-primary ">
+            <h2 className=" text-3xl lg:text-6xl  mb-4 font-primary font-bold text-white text-center uppercase ">Annnonces Similaires</h2>
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex flex-row gap-10 pl-10 ">
                 {
                     produit.map((produit,index)=>(
                         <Link href={`/boutique/${encodeURIComponent(produit?.name.trim().replace(/[/%\s]+/g, '-'))}/${produit?.id}`} key={index} className={`group cursor-pointer duration-700 flex flex-col select-none   gap-3 items-center justify-center min-w-90 min-h-90 overflow-hidden   relative  `}>
-                            <Image className={`group duration-700 ${index % 2 ?'rounded-tl-[10rem] group-hover:rounded-tl-[20rem] rounded-br-[10rem] rounded-tr-[20rem] rounded-bl-[15rem]':'rounded-tl-[15rem] group-hover:rounded-tr-[20rem]  rounded-br-[20rem] rounded-tr-[10rem] rounded-bl-[15rem]'}   object-cover  rounded-2xl  border-4 border-primary  `} src={produit?.images[0]?.src} width={1920} height={1080} alt={produit.name} title={produit.name}/>
-                            <div className={` min-h-20 min-w-20 top-4 right-4 flex items-center justify-center  ${index % 2 ?'rounded-tl-[10rem] rounded-br-[10rem] rounded-tr-[20rem] rounded-bl-[15rem]':'rounded-tl-[15rem]  rounded-br-[20rem] rounded-tr-[10rem] rounded-bl-[15rem]'}  absolute bg-primary px-2`}><span className=" font-primary text-white text-lg font-medium">{produit?.price? new Intl.NumberFormat('de-DE').format(produit.price) + " dh": "--"}</span></div>
-                            <h3 className="text-lg font-primary text-white font-medium text-center ">{produit?.name}</h3>
+                            <Image className={`group duration-700 ${index % 2 ?'rounded-tl-[10rem] group-hover:rounded-tl-[20rem] rounded-br-[10rem] rounded-tr-[20rem] rounded-bl-[15rem]':'rounded-tl-[15rem] group-hover:rounded-tr-[20rem]  rounded-br-[20rem] rounded-tr-[10rem] rounded-bl-[15rem]'}   object-cover  rounded-2xl  border-4 border-white  `} src={produit?.images[0]?.src} width={1920} height={1080} alt={produit.name} title={produit.name}/>
+                            <div className={` min-h-20 min-w-20 top-4 right-4 flex items-center justify-center  ${index % 2 ?'rounded-tl-[10rem] rounded-br-[10rem] rounded-tr-[20rem] rounded-bl-[15rem]':'rounded-tl-[15rem]  rounded-br-[20rem] rounded-tr-[10rem] rounded-bl-[15rem]'}  absolute bg-white px-2`}><span className=" font-primary text-primary text-lg font-medium">{produit?.price? new Intl.NumberFormat('de-DE').format(produit.price) + " dh": "--"}</span></div>
+                            <h3 className="text-3xl text-center  mb-4 font-primary font-bold text-white uppercase ">{produit?.name}</h3>
                         </Link>
                     ))
                 }

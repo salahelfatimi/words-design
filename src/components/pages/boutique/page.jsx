@@ -62,14 +62,13 @@ export default function Boutique({type}) {
         <div className=" flex flex-col gap-10 pt-10 ">
             <Filter type={type}/>
             {initialLoading ? (Loading(true)) : (produit.length>0?(
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 container mx-auto  px-10 ">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 container mx-auto  px-10 ">
                         {
                             produit.map((produit,index)=>(
-                                <Link href={`/boutique/${encodeURIComponent(produit?.name.trim().replace(/[/%\s]+/g, '-'))}/${produit?.id}`} key={index} className={` border-2 shadow-2xl border-primary rounded-4xl     group cursor-pointer duration-700 flex flex-col select-none items-center justify-center min-w-72 min-h-72 overflow-hidden   relative  `}>
-                                    <Image className={`  duration-700  object-cover group-hover:scale-110  `} src={produit?.images[0]?.src} width={800} height={800} alt={produit.name} title={produit.name}/>
-                                    <h3 className=" z-10  bg-white w-full px-4 py-2 font-primary text-primary font-medium text-center ">{produit?.name}</h3>
-                                    <div className={`z-10   px-4 py-1 w-full left-0 flex items-center justify-center font-primary bg-primary `}><span className=" font-mono text-white text-lg font-medium ">Prix : {produit?.price? new Intl.NumberFormat('de-DE').format(produit.price) + " dh": "--"}</span></div>
-
+                                <Link href={`/boutique/${encodeURIComponent(produit?.name.trim().replace(/[/%\s]+/g, '-'))}/${produit?.id}`} key={index} className={`group cursor-pointer duration-700 flex flex-col select-none   gap-3 items-center justify-center min-w-90 min-h-90 overflow-hidden   relative  `}>
+                                    <Image className={`group duration-700 ${index % 2 ?'rounded-tl-[10rem] group-hover:rounded-tl-[20rem] rounded-br-[10rem] rounded-tr-[20rem] rounded-bl-[15rem]':'rounded-tl-[15rem] group-hover:rounded-tr-[20rem]  rounded-br-[20rem] rounded-tr-[10rem] rounded-bl-[15rem]'}   object-cover  rounded-2xl  border-4 border-primary  `} src={produit?.images[0]?.src} width={1920} height={1080} alt={produit.name} title={produit.name}/>
+                                    <div className={` min-h-28 min-w-28 top-4 right-4 flex items-center justify-center  ${index % 2 ?'rounded-tl-[10rem] rounded-br-[10rem] rounded-tr-[20rem] rounded-bl-[15rem]':'rounded-tl-[15rem]  rounded-br-[20rem] rounded-tr-[10rem] rounded-bl-[15rem]'}  absolute bg-primary px-2`}><span className=" text-2xl text-center  mb-4 font-primary font-bold text-white uppercase ">{produit?.price? new Intl.NumberFormat('de-DE').format(produit.price) + " dh": "--"}</span></div>
+                                    <h3 className="text-3xl text-center  mb-4 font-primary font-bold text-primary uppercase ">{produit?.name}</h3>
                                 </Link>
                             ))
                         } 

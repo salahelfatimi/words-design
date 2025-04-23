@@ -44,13 +44,13 @@ export default function Filter() {
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex flex-row gap-10 pl-10 w-full">
                     <div className={`px-4 py-2 rounded-full ${!selectedType ? "bg-secondary text-white" : "bg-primary text-white"}`}>
-                        <Link className="font-primary w-full whitespace-nowrap" href={`?`}>
+                        <Link className="text-2xl text-center  mb-4 font-primary font-bold text-white uppercase  whitespace-nowrap" href={`?`}>
                             Tous les produits
                         </Link>
                     </div>
                     {categories.map((produit, index) => (
                         <div key={index} className={`px-4 py-2 rounded-full ${ selectedType === String(produit.id) ? "bg-secondary text-white" : "bg-primary text-white" }`} >
-                            <Link className="font-primary w-full whitespace-nowrap" href={`?type=${produit.id}`} >
+                            <Link className="text-2xl text-center  mb-4 font-primary font-bold text-white uppercase  whitespace-nowrap" href={`?type=${produit.id}`} >
                                 {produit?.name}
                             </Link>
                         </div>
