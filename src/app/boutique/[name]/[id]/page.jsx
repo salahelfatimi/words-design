@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
                     alt: `Preview image for ${product?.name || '/opengraph-image.jpg'}`,
                 },
             ],
-            type: "product",
+            type: "article",
         },
     };
 }
