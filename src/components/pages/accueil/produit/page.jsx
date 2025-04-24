@@ -57,7 +57,7 @@ export default function Produit(){
                 </div>
             </div>
             <div className=" flex flex-col items-center justify-center pt-10">
-                <Link href={'/boutique'} className=" bg-primary text-white w-fit px-6 py-3 rounded-4xl font-primary border-2 border-primary hover:bg-white hover:text-primary font-medium">Voir Boutique</Link>
+                <Link href={'/boutique'} className="bg-primary text-white rounded-full text-2xl   mb-4 font-primary font-bold  uppercase  hover:bg-secondary hover:text-white py-4 px-8 flex flex-row items-center justify-center gap-2 duration-700">Voir Boutique</Link>
             </div>
         </div>
     )

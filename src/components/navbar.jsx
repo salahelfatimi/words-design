@@ -52,7 +52,7 @@ export default function Navbar() {
     const ItemsNavbar = [
         { name: 'Accueil', link: '/' },
         { name: 'Boutique', link: '/boutique' },
-        { name: 'Blog', link: '/blog' },
+        { name: 'Blog', link: '/blogs' },
         { name: 'À propos', link: '/a-propos' },
         { name: 'Contactez-nous', link: '/contactez-nous' },
     ];
