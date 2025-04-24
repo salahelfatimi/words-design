@@ -61,7 +61,7 @@ export default function Navbar() {
         <header ref={navbarRef} className="fixed z-50 top-0 left-0 w-full px-8 lg:px-20 py-4">
             <div className="hidden lg:block">
                 <div className="flex flex-row gap-4 items-center justify-between container mx-auto">
-                    <Image src={logoSrc} width={500} height={500} className="w-44" alt="art by Warda" title="art by Warda" />
+                    <Image src={logoSrc} width={500} height={500} className="w-36" alt="art by Warda" title="art by Warda" />
                     <ul ref={linksRef} className="flex space-x-4 text-white">
                         {ItemsNavbar.map((item, index) => (
                             <Link href={item.link} key={index} className="cursor-pointer  font-medium font-primary hover:underline duration-500 underline-offset-2">
