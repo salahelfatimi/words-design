@@ -171,8 +171,8 @@ export default function Cart() {
                                     <p className="text-gray-500 font-primary text-2xl">Votre panier est vide.</p>
                                 </div>
                                 <div className="flex flex-row gap-1 items-center justify-center">
-                                    <button onClick={toggleModal} className="mt-4 font-primary bg-red-500 text-white cursor-pointer hover:bg-red-400 py-4 px-4 rounded-lg flex items-center justify-center" > Fermer le panier </button>
-                                    <Link onClick={toggleModal} href={"/boutique"} className="mt-4 font-primary bg-gray-500 text-white cursor-pointer hover:bg-gray-400 py-4 px-4 rounded-lg flex items-center justify-center" > Aller à la boutique </Link>
+                                    <button onClick={toggleModal} className="mt-4 font-primary bg-red-500 text-white cursor-pointer hover:bg-red-400 py-4 px-4 rounded-lg flex items-center justify-center  whitespace-nowrap" > Fermer le panier </button>
+                                    <Link onClick={toggleModal} href={"/boutique"} className="mt-4 font-primary bg-gray-500 text-white cursor-pointer hover:bg-gray-400 py-4 px-4 rounded-lg flex items-center justify-center  whitespace-nowrap" > Aller à la boutique </Link>
                                 </div>
                             </div>
                         )}

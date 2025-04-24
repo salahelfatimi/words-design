@@ -67,12 +67,12 @@ export default function AllPosts({ type, category }) {
         <>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {postsToDisplay.length > 0 ? (
-              postsToDisplay.map((post) => (
+              postsToDisplay.map((post,index) => (
                 <div key={post.id} className="flex flex-col gap-3">
-                  <Image src={post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/opengraph-image.jpg'} alt={post.title.rendered} width={1920} height={1080} className={` w-full object-cover object-center rounded-2xl border-4 border-primary`} />
-                  <h2 className="text-primary border-primary text-xl font-medium" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                  <p className="text-white text-xs font-light" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-                  <Link href={`/blogs/${encodeURIComponent(post.title.rendered.trim().replace(/[/%\s]+/g, "-"))}/${post.id}`} className=" bg-primary border-primary hover:bg-white hover:text-primary  duration-700 rounded py-2 px-4 text-center font-bold border-2 text-white ">
+                  <Image src={post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/opengraph-image.jpg'} alt={post.title.rendered} width={1920} height={1080} className={` ${index % 2 ?'rounded-tl-[10rem] group-hover:rounded-tl-[20rem] rounded-br-[10rem] rounded-tr-[20rem] rounded-bl-[15rem]':'rounded-tl-[15rem] group-hover:rounded-tr-[20rem]  rounded-br-[20rem] rounded-tr-[10rem] rounded-bl-[15rem]'} w-full h-full object-cover object-center rounded-2xl border-4 border-primary`} />
+                  <h2 className="text-primary border-primary text-xl text-center font-medium" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                  <p className="text-secondary text-center " dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+                  <Link href={`/blogs/${encodeURIComponent(post.title.rendered.trim().replace(/[/%\s]+/g, "-"))}/${post.id}`} className=" bg-primary rounded-full border-primary hover:bg-white hover:text-primary  duration-700  py-2 px-4 text-center font-bold border-2 text-white ">
                     En savoir plus
                   </Link>
                 </div>

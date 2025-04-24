@@ -38,7 +38,7 @@ export default function LatestBlog() {
               <div className="container absolute bottom-8 flex flex-col justify-between gap-4 px-4">
                 <h1 className="text-white  text-xl lg:text-3xl font-bold" dangerouslySetInnerHTML={{ __html: latestPost.title.rendered }}/>
                 <p className="text-white font-light" dangerouslySetInnerHTML={{ __html: latestPost.excerpt.rendered }}/>
-                <Link href={`/blogs/${encodeURIComponent( latestPost.title.rendered.trim().replace(/[/%\s]+/g, '-') )}/${latestPost.id}`} className="bg-primary  text-white hover:bg-white hover:text-primary  duration-700 rounded py-2 px-4 text-center font-bold border-2 border-primary " > En savoir plus </Link>
+                <Link href={`/blogs/${encodeURIComponent( latestPost.title.rendered.trim().replace(/[/%\s]+/g, '-') )}/${latestPost.id}`} className="bg-primary  text-white hover:bg-white hover:text-primary text-2xl duration-700 rounded-full py-4 px-8 text-center font-bold border-2 border-primary " > En savoir plus </Link>
               </div>
         </div>
       )}
