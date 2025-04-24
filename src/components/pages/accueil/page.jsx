@@ -10,7 +10,6 @@ import Avis from "@/components/tools/avis";
 export default function Pgae(){
     return(
         <div>
-            
             <div className=" relative h-[100vh] bg-white">
                 <div className=" absolute inset-0 bg-black opacity-50 "></div>
                 <Image src={'/img/header.webp'} width={1920} height={1080} className=" w-full h-full object-cover "  alt="art by Warda" title="art by Warda" />
