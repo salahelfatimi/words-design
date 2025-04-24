@@ -81,10 +81,10 @@ export default function Product_Details({ id }) {
     return (
         <div >
             <Toaster position="top-center" reverseOrder={false}/>
-            <div className=" flex flex-col lg:flex-row min-h-screen ">
+            <div className=" flex flex-col lg:flex-row min-h-screen lg:max-h-[100vh] bg-primary ">
                 <div className="flex lg:w-full ">
                     {produit?.images?.length > 0 ? (
-                        <Image src={produit.images[currentImageIndex].src} alt={produit?.name} title={produit?.name} width={1920} height={1080} className="h-full w-fit object-cover lg:border-b-4 lg:border-r-4 shadow-2xl " />
+                        <Image src={produit.images[currentImageIndex].src} alt={produit?.name} title={produit?.name} width={1920} height={1080} className="h-full w-fit object-cover border-white lg:border-b-4 lg:border-r-4 shadow-2xl " />
                     ) : (
                         <div className="h-96 w-full object-cover bg-[#EFEFEF] flex flex-col justify-center items-center">
                             <Image width={1920} height={1080} src={'/immobilier/house.png'} className="w-32 md:w-40 lg:w-52" />
