@@ -109,7 +109,7 @@ export default function Cart() {
 
             {/* Confirmation Dialog */}
             {confirmDelete.show && (
-                <div className="fixed font-primary inset-0 z-[60] bg-black bg-opacity-50 flex items-center justify-center">
+                <div className="fixed font-primary inset-0 z-[60] bg-black bg-opacity-50 flex items-center justify-center ">
                     <div className="bg-white p-6 rounded-lg shadow-lg text-center">
                         <p className="text-lg font-medium mb-4">Êtes-vous sûr de vouloir supprimer ce produit ?</p>
                         <div className="flex justify-center gap-4">
@@ -165,14 +165,14 @@ export default function Cart() {
                                 </button>
                             </>
                             ) : (
-                            <div className="flex flex-col items-center justify-center">
+                            <div className="flex flex-col items-center justify-center ">
                                 <div className="flex flex-col gap-4 items-center justify-center">
                                     <ShoppingBag className="animate-bounce" size={50} />
                                     <p className="text-gray-500 font-primary text-2xl">Votre panier est vide.</p>
                                 </div>
                                 <div className="flex flex-row gap-1 items-center justify-center">
-                                    <button onClick={toggleModal} className="mt-4 font-primary bg-red-500 text-white cursor-pointer hover:bg-red-400 py-4 px-4 rounded-lg flex items-center justify-center  whitespace-nowrap" > Fermer le panier </button>
-                                    <Link onClick={toggleModal} href={"/boutique"} className="mt-4 font-primary bg-gray-500 text-white cursor-pointer hover:bg-gray-400 py-4 px-4 rounded-lg flex items-center justify-center  whitespace-nowrap" > Aller à la boutique </Link>
+                                    <button onClick={toggleModal} className="mt-4 text-sm font-primary bg-red-500 text-white cursor-pointer hover:bg-red-400 py-4 px-4 rounded-lg flex items-center justify-center  whitespace-nowrap" > Fermer le panier </button>
+                                    <Link onClick={toggleModal} href={"/boutique"} className="mt-4 text-sm font-primary bg-gray-500 text-white cursor-pointer hover:bg-gray-400 py-4 px-4 rounded-lg flex items-center justify-center  whitespace-nowrap" > Aller à la boutique </Link>
                                 </div>
                             </div>
                         )}

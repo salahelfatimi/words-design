@@ -39,9 +39,9 @@ export default function Faq() {
                 <div className=" flex flex-col gap-6 w-full ">
                     {faqData.map((faq, index) => (
                         <div key={index} className="flex flex-col p-4 gap-2 border-b-2 last:border-b-0 border-primary">
-                            <h3 onClick={()=>(setOpenFaq(index))} className=" lg:text-2xl font-primary font-medium text-primary cursor-pointer"> - {faq.question}</h3>
+                            <h3 onClick={()=>(setOpenFaq(index))} className=" text-sm lg:text-2xl font-primary font-medium text-primary cursor-pointer"> - {faq.question}</h3>
                             <div className={`overflow-hidden transition-all duration-700 ease-in-out text-secondary ${openFaq == index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                            <p className="font-primary text-sm lg:text-base">{faq.answer}</p>
+                            <p className="font-primary text-xs lg:text-base">{faq.answer}</p>
                             </div>                    
                         </div>
                     ))}

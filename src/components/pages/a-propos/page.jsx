@@ -10,11 +10,11 @@ export default function AboutUs(){
                 <Image src={'/img/header.webp'} width={1920} height={1080} className="  w-full h-screen object-cover "  alt="art by Warda" title="art by Warda" />
                 <div className=" absolute bg-black opacity-50 inset-0 "></div>
                 <div className=" absolute inset-0 flex flex-col items-center justify-center">
-                    <h1 className=" font-primary text-white text-3xl lg:text-6xl font-bold uppercase">À propos de Art by Warda</h1>
+                    <h1 className=" font-primary text-center text-white text-3xl lg:text-6xl font-bold uppercase">À propos de Art by Warda</h1>
                 </div>
             </div>
             <LogoScroll/>
-            <div className=" px-10 mx-auto container py-6 font-primary text-center text-2xl space-y-4">
+            <div className=" px-4 mx-auto container py-6 font-primary text-center text-sm lg:text-2xl space-y-4">
                 <p className=" font-medium text-primary uppercase">Bienvenue dans l’univers d’Art by Warda, où chaque création raconte une histoire.</p>
                 <p>Passionnée par le design et l’art de la récupération, je redonne vie aux objets oubliés pour leur offrir une nouvelle âme. Mon travail mêle traditions marocaines et inspirations contemporaines, dans une démarche éco-responsable et profondément humaine.</p>
                 <p>Chaque pièce est unique, pensée avec soin et réalisée à la main. Je crois que l’art ne se trouve pas uniquement dans les galeries, mais aussi dans les objets du quotidien, porteurs d’émotion, de mémoire et de beauté.</p>

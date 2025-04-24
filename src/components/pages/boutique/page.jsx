@@ -58,7 +58,7 @@ export default function Boutique({type}) {
     }, [loading, page, allLoaded]);
     return (
     <div className=" ">
-        <div className=" bg-primary min-h-20   pb-10 "></div>
+        <div className=" bg-primary min-h-24   pb-10 "></div>
         <div className=" flex flex-col gap-10 pt-10 ">
             <Filter type={type}/>
             {initialLoading ? (Loading(true)) : (produit.length>0?(
@@ -77,8 +77,8 @@ export default function Boutique({type}) {
                 (
                     <div className="min-h-screen flex flex-col items-center justify-center gap-4 ">
                         <PackageSearch size={70} className=" stroke-primary" />
-                        <h2 className=" text-secondary font-primary font-medium text-3xl">Aucun produit disponible pour le moment</h2>
-                        <p className=" font-primary">Nous travaillons sur de nouvelles créations uniques.</p>
+                        <h2 className=" text-secondary font-primary font-medium text-3xl text-center">Aucun produit disponible pour le moment</h2>
+                        <p className=" font-primary text-center">Nous travaillons sur de nouvelles créations uniques.</p>
                     </div>
                 )
             

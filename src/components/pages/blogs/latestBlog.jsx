@@ -36,9 +36,9 @@ export default function LatestBlog() {
               <Image src={ latestPost._embedded?.['wp:featuredmedia']?.[0]?.source_url || '/opengraph-image.jpg' } alt={latestPost.title.rendered || 'Default Alt Text'} width={1920} height={1080} className="h-[100vh] w-full object-cover object-center" />
               <div className="absolute inset-0 bg-black opacity-65"></div></div>
               <div className="container absolute flex flex-col justify-between items-center gap-4 px-4">
-                <h1 className="text-white  text-xl lg:text-3xl font-bold" dangerouslySetInnerHTML={{ __html: latestPost.title.rendered }}/>
-                <p className="text-white font-light" dangerouslySetInnerHTML={{ __html: latestPost.excerpt.rendered }}/>
-                <Link href={`/blogs/${encodeURIComponent( latestPost.title.rendered.trim().replace(/[/%\s]+/g, '-') )}/${latestPost.id}`} className="bg-primary  text-white hover:bg-white hover:text-primary text-2xl duration-700 rounded-full py-3 px-6 w-fit text-center font-bold border-2 border-primary " > En savoir plus </Link>
+                <h1 className="text-center text-white  text-xl lg:text-3xl font-bold" dangerouslySetInnerHTML={{ __html: latestPost.title.rendered }}/>
+                <p className="text-center text-white font-light" dangerouslySetInnerHTML={{ __html: latestPost.excerpt.rendered }}/>
+                <Link href={`/blogs/${encodeURIComponent( latestPost.title.rendered.trim().replace(/[/%\s]+/g, '-') )}/${latestPost.id}`} className="bg-primary  text-white hover:bg-white hover:text-primary text-lg duration-700 rounded-full py-3 px-6 w-fit text-center font-bold border-2 border-primary " > En savoir plus </Link>
               </div>
         </div>
       )}
