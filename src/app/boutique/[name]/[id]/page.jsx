@@ -1,7 +1,6 @@
 import Product_Details from "@/components/pages/productDetails/page";
-import Avis from "@/components/tools/avis";
 import Faq from "@/components/tools/faq";
-import Image from "next/image";
+import Head from "next/head";
 
 export async function generateMetadata({ params }) {
     const { id } = await params;

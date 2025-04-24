@@ -71,9 +71,9 @@ export default function Navbar() {
                     </ul>
                 </div>
             </div>
-            <div className="lg:hidden block">
+            <div className="lg:hidden block py-4">
                 <div className="flex flex-row gap-4 items-center justify-between container mx-auto">
-                    <Image src={logoSrc} width={500} height={500} className="w-20" alt="art by Warda" title="art by Warda" />
+                    <Image src={logoSrc} width={500} height={500} className="w-40" alt="art by Warda" title="art by Warda" />
                     <div onClick={toggleMobileMenu} className="bg-primary p-1">
                         <Menu className="stroke-white" size={40} />
                     </div>
