@@ -12,7 +12,7 @@ export default function NotFound() {
             It seems that this page does not exist.        
           </p>
           <Link className=" underline underline-offset-4  font-bold text-xl bg-primary  text-white flex  duration-700 items-center gap-2" href="/">
-            <Home size={30}/>Retour à l'accueil
+            <Home size={30}/>Retour à l&apos;accueil
           </Link>
         </div>
         
