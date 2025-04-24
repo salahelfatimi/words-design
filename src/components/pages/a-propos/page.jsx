@@ -14,8 +14,8 @@ export default function AboutUs(){
                 </div>
             </div>
             <LogoScroll/>
-            <div className=" mx-auto container py-6 font-primary text-center text-2xl space-y-4">
-                <p>Bienvenue dans l’univers d’Art by Warda, où chaque création raconte une histoire.</p>
+            <div className=" px-10 mx-auto container py-6 font-primary text-center text-2xl space-y-4">
+                <p className=" font-medium text-primary uppercase">Bienvenue dans l’univers d’Art by Warda, où chaque création raconte une histoire.</p>
                 <p>Passionnée par le design et l’art de la récupération, je redonne vie aux objets oubliés pour leur offrir une nouvelle âme. Mon travail mêle traditions marocaines et inspirations contemporaines, dans une démarche éco-responsable et profondément humaine.</p>
                 <p>Chaque pièce est unique, pensée avec soin et réalisée à la main. Je crois que l’art ne se trouve pas uniquement dans les galeries, mais aussi dans les objets du quotidien, porteurs d’émotion, de mémoire et de beauté.</p>
                 <h2 className=" text-primary font-semibold">Chez Art by Warda, vous trouverez :</h2>

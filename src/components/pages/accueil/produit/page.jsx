@@ -42,7 +42,7 @@ export default function Produit(){
     if (isLoading) return <Loading />;
     return(
         <div className=" py-10 ">
-            <h2 className=" mx-auto container  text-3xl lg:text-6xl  mb-4 font-primary font-bold text-primary uppercase  text-center ">Découvrez nos Nouveautés en Décoration Intérieure</h2>
+            <h2 className=" px-2 mx-auto container  text-2xl lg:text-6xl  mb-4 font-primary font-bold text-primary uppercase  text-center ">Découvrez nos Nouveautés en Décoration Intérieure</h2>
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex flex-row gap-10 pl-10 ">
                 {

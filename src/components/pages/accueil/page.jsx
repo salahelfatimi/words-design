@@ -13,9 +13,9 @@ export default function Pgae(){
             <div className=" relative h-screen bg-white">
                 <div className=" absolute inset-0 bg-black opacity-50 "></div>
                 <Image src={'/img/header.webp'} width={1920} height={1080} className=" w-full h-full object-cover "  alt="art by Warda" title="art by Warda" />
-                <div className=" absolute inset-0 flex flex-col items-center justify-center container mx-auto gap-8">
-                    <h1 className="text-3xl lg:text-6xl  mb-4 font-primary font-bold text-white uppercase text-center ">art by Warda - Votre partenaire pour l'aménagement intérieur et la décoration à Marrakech</h1>
-                    <Link href={'/boutique'} className=" bg-primary text-white rounded-full text-2xl   mb-4 font-primary font-bold  uppercase  hover:bg-secondary hover:text-white py-4 px-8 flex flex-row items-center justify-center gap-2 duration-700 "><Store size={40}/> Voir Boutique </Link>
+                <div className=" px-1 absolute inset-0 flex flex-col items-center justify-center container mx-auto gap-4">
+                    <h1 className="text-xl lg:text-6xl  mb-4 font-primary font-bold text-white uppercase text-center ">art by Warda - Votre partenaire pour l'aménagement intérieur et la décoration à Marrakech</h1>
+                    <Link href={'/boutique'} className=" bg-primary text-white rounded-full text-xl lg:text-2xl   mb-4 font-primary font-bold  uppercase  hover:bg-secondary hover:text-white py-4 px-8 flex flex-row items-center justify-center gap-2 duration-700 "><Store size={40}/> Voir Boutique </Link>
                 </div>
             </div>
             <LogoScroll/>

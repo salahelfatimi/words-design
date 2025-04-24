@@ -37,7 +37,7 @@ export default function Blogs(){
     return(
         <div className={`font-primary flex flex-col  `}>
             <LatestBlog/>
-            <div className="container mx-auto flex flex-col gap-10">
+            <div className="container px-4 mx-auto flex flex-col gap-10">
                 <h2 className=" border-primary text-primary  font-primary font-bold text-4xl border-b-4 w-full text-center py-4  ">Tous les Blogs</h2>
                 <AllBlogs/>
             </div>
