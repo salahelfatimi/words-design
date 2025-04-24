@@ -23,7 +23,7 @@ export default function Pgae(){
             <Categories/>
             <div className=" px-4 flex flex-col lg:flex-row items-center gap-10 justify-center mx-auto container py-10">
                 <div className="lg:w-1/2 flex items-center justify-center  ">
-                    <video width="100%" height="100%" autoPlay loop playsInline muted className="h-[40rem] shadow-2xl w-fit object-cover animate-rounded-change" >
+                    <video width="100%" height="100%" autoPlay loop playsInline muted className="h-[40rem] shadow-2xl w-fit object-cover animate-rounded-change" alt="art by Warda" title="art by Warda">
                         <source src="/vid/aboutUs/vid.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
