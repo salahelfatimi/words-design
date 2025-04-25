@@ -9,16 +9,16 @@ export async function generateMetadata({ params }) {
         throw new Error("Failed to fetch product data");
     }
     const product = await response.json();
-    const productDescription = product?.description ? product?.description.replace(/<[^>]*>/g, '') : 'Découvrez Art by Design , concept store à Marrakech : objets déco, illustration, design et personnalisation artisanale. Élégance, modernité et savoir-faire.';
+    const productDescription = product?.description  ? product?.description.replace(/<[^>]*>/g, '') : 'Découvrez Art by Design , concept store à Marrakech : objets déco, illustration, design et personnalisation artisanale. Élégance, modernité et savoir-faire.';
     return {
         title: `${product?.name} - Art by Warda | Décoration artisanale`,
-        description: productDescription || 'Découvrez Art by Design , concept store à Marrakech : objets déco, illustration, design et personnalisation artisanale. Élégance, modernité et savoir-faire.',
+        description: productDescription.slice(0, 150)  || 'Découvrez Art by Design , concept store à Marrakech : objets déco, illustration, design et personnalisation artisanale. Élégance, modernité et savoir-faire.',
         alternates: {
             canonical: `/boutique/${encodeURIComponent(product?.name.trim().replace(/[/%\s]+/g, '-'))}/${product.id}`,
         },
         openGraph: {
             title: `${product?.name} - Art by Warda | Décoration artisanale`,
-            description: productDescription || 'Découvrez Art by Design , concept store à Marrakech : objets déco, illustration, design et personnalisation artisanale. Élégance, modernité et savoir-faire.',
+            description: productDescription.slice(0, 150)  || 'Découvrez Art by Design , concept store à Marrakech : objets déco, illustration, design et personnalisation artisanale. Élégance, modernité et savoir-faire.',
             url: `/boutique/${encodeURIComponent(product?.name.trim().replace(/[/%\s]+/g, '-'))}/${product.id}`,
             siteName: "Art by Warda ",
             images: [
@@ -30,7 +30,8 @@ export async function generateMetadata({ params }) {
                     alt: `Preview image for ${product?.name || '/opengraph-image.jpg'}`,
                 },
             ],
-            type: "article",
+            type: "website",
+          
         },
     };
 }

@@ -8,6 +8,7 @@ import CategoryProduct from "../categoryProduct/page";
 import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 import LogoScroll from "@/components/tools/logoScroll";
+import Head from "next/head";
 
 export default function Product_Details({ id }) {
     const [produit, setProduit] = useState(null);
@@ -16,6 +17,7 @@ export default function Product_Details({ id }) {
     const [quantite, setQuantite] = useState(1)
     const [productUrl, setProductUrl] = useState("");
     const router = useRouter()
+    
     const handleSaveDetails = () => {
         if (!produit) return;
 
@@ -78,13 +80,56 @@ export default function Product_Details({ id }) {
         }
     }, [produit]);
     if (isLoading) return <Loading />;
+    const jsonLd = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": produit?.name || "Unknown Product",
+        "image": produit?.images?.length > 0 ? produit.images.map((img) => img.src) : [],
+        "description": produit?.description?.replace(/<[^>]*>/g, '').slice(0, 150) || "No description available.",
+        "sku": produit?.sku || "N/A",
+        "mpn": produit?.mpn || "N/A",
+        "brand": {
+            "@type": "Brand",
+            "name": "art by warda"
+        },
+        "review": produit?.review ? {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": produit.review.ratingValue || "0",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": produit.review.author || "Anonymous"
+            }
+        } : undefined,
+        "aggregateRating": produit?.aggregateRating ? {
+            "@type": "AggregateRating",
+            "ratingValue": produit.aggregateRating.ratingValue || "0",
+            "reviewCount": produit.aggregateRating.reviewCount || "0"
+        } : undefined,
+        "offers": {
+            "@type": "Offer",
+            "url": productUrl || "https://example.com/product",
+            "priceCurrency": produit?.currency || "MAD",
+            "price": produit?.price || "0.00",
+            "priceValidUntil": produit?.priceValidUntil || "2023-12-31",
+            "itemCondition": `https://schema.org/${produit?.condition || "NewCondition"}`,
+            "availability": `https://schema.org/${produit?.stock_status || "InStock"}`
+        }
+    };
     return (
         <div >
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <Toaster position="top-center" reverseOrder={false}/>
             <div className=" flex flex-col lg:flex-row min-h-screen lg:max-h-[100vh] bg-primary ">
                 <div className="flex lg:w-full ">
                     {produit?.images?.length > 0 ? (
-                        <Image src={produit.images[currentImageIndex].src} alt={produit?.name} title={produit?.name} width={1920} height={1080} className="h-full w-fit object-cover border-white lg:border-b-4 lg:border-r-4 shadow-2xl " />
+                        <Image src={produit.images[currentImageIndex].src} alt={produit?.name} title={produit?.name} width={1920} height={1080} className="h-full w-full object-cover border-white lg:border-b-4 lg:border-r-4 shadow-2xl " />
                     ) : (
                         <div className="h-96 w-full object-cover bg-[#EFEFEF] flex flex-col justify-center items-center">
                             <Image width={1920} height={1080} src={'/immobilier/house.png'} className="w-32 md:w-40 lg:w-52" />
