@@ -30,7 +30,7 @@ export async function generateMetadata({ params}) {
         alt: `Preview image for ${blogs.title.rendered || '/opengraph-image.jpg'}`,
         },
       ],
-      type: "website",
+      type: "article",
       },
     };
   }

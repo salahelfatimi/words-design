@@ -5,25 +5,28 @@ const exo_2 = Exo_2 ({ subsets: ["latin-ext"], weight:['100','200','300','400','
 
 export async function generateMetadata(){
   return {
-    title: " blogs",
+    title: " Blog Art by Warda | Inspirations et Tendances en Décoration ",
+    description: "Explorez les dernières tendances déco, conseils d’aménagement et inspirations créatives avec le blog de Art by Warda. Donnez vie à vos projets d'intérieur !",
+
     alternates: {
       canonical: "/blogs",
     },
     openGraph: {
-      title: "art by warda | blogs",
+      title: " Blog Art by Warda | Inspirations et Tendances en Décoration ",
+      description: "Explorez les dernières tendances déco, conseils d’aménagement et inspirations créatives avec le blog de Art by Warda. Donnez vie à vos projets d'intérieur !",
       url:`${process.env.NEXT_PUBLIC_BASE_URL}/blogs`,
       robots: {
         index: true,
         follow: true,
       },
-      siteName: "art by warda | blogs",
+      siteName: "art by warda",
       images: [
         {
           url: `/opengraph-image.jpg`,
           secureUrl: `/opengraph-image.jpg`,
           width: 1200,
           height: 675,
-          alt: `art by warda`,
+          alt: `Blog Art by Warda | Inspirations et Tendances en Décoration`,
         }
       ],
       type: "website",

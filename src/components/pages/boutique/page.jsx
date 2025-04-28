@@ -58,7 +58,7 @@ export default function Boutique({type}) {
     }, [loading, page, allLoaded]);
     return (
     <div className=" ">
-        <div className=" bg-primary min-h-24   pb-10 "></div>
+        <div className=" bg-primary min-h-20   pb-10 "></div>
         <div className=" flex flex-col gap-10 pt-10 ">
             <Filter type={type}/>
             {initialLoading ? (Loading(true)) : (produit.length>0?(
